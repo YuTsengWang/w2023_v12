@@ -1,0 +1,83 @@
+#intro.jumbotron{
+    height:70w;
+}
+
+#intro h1{
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+#intro .container{
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.btn{
+    background: #f05f5c;
+    color: white;
+    padding: 9px 26px;
+    border-radius: 20px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Alkatra', cursive;
+}
+
+p, a, input, label, textarea, span, ul, li{
+    font-family: 'Alkatra', cursive;
+    font-family: 'Delicious Handrawn', cursive;
+}
+
+body {
+    background-color: #ccc;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+label {
+    font-size: 0.8em;
+    color: #444;
+}
+
+footer {
+    font-size: small;
+}
+
+.borderlessheader {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: right;
+    color: white;
+    background-color: black;
+}
+
+.fixedlabel {
+    display: inline-block;
+    width: 100px;
+    text-align: left;
+}
+
+.container {
+    width: 800px;
+    border: solid 1px black;
+    margin: 0 auto 0 auto;
+    background-color: white;
+}
+.contentContainer {
+    padding: 10px;
+}
+
+.contentContainer p {
+    color: #777;
+}
+
+footer {
+    text-align: center;
+    color: #999;
+}
+

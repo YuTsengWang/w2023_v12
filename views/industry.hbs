@@ -1,0 +1,60 @@
+<body>
+        <div class="hero-content">
+            <div class="hero-content-overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        {{#if industry}}
+                       <div class="hero-content-wrap flex flex-column justify-content-center align-items-start">
+                       
+                            <header class="entry-header">
+                                <h2 class="entry-title">Welcome to the {{industry}} community</h2>
+                                <a class="btn mt-4 mt-sm-0" href="/industry/{{industry}}/addpost">Create Post</a>
+                            </header><!-- .entry-header -->
+                        {{#each posts}}
+                        <div class="course-content-wrap">
+                            <header class="entry-header">
+                                <div class="course-ratings flex align-items-center">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-o"></span>
+
+                                    <span class="course-ratings-count">(4 votes)</span>
+                                </div><!-- .course-ratings -->
+
+                                <h2 class="entry-title"><a href="/industry/{{category_name}}/{{_id}}">{{title}}</a></h2>
+
+                                <div class="entry-meta flex flex-wrap align-items-center">
+                                    <div class="course-author"><a href="#">{{user_name}}</a></div>
+                                    <div class="course-content"><p>{{description}}</p></div>
+                                    <div class="course-date">July 21, 2018</div>
+                                </div><!-- .course-date -->
+                            </header><!-- .entry-header -->
+                        </div><!-- .course-content-wrap -->
+                        {{else}}
+                            <h4><strong>No posts found</strong></h4>
+                        {{/each}}
+                       </div><!-- .hero-content-wrap -->
+                        {{else}}
+                        <div class="hero-content-wrap flex flex-column justify-content-center align-items-start">
+                            <header class="entry-header">
+                                <h4>Explore the community</h4>
+                                <h1>Welcome to the<br/>Trio Discussion Forum</h1>
+                                {{> industry-nav }}
+                            </header><!-- .entry-header -->
+                       </div><!-- .hero-content-wrap -->
+                        {{/if}}
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+            </div><!-- .hero-content-hero-content-overlay -->
+        </div><!-- .hero-content -->        
+        </div>
+        <script type='text/javascript' src='../js/jquery.js'></script>
+        <script type='text/javascript' src='../js/swiper.min.js'></script>
+        <script type='text/javascript' src='../js/masonry.pkgd.min.js'></script>
+        <script type='text/javascript' src='../js/jquery.collapsible.min.js'></script>
+        <script type='text/javascript' src='../js/custom.js'></script>
+</body>

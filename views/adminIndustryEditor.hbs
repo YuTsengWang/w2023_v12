@@ -1,0 +1,34 @@
+<body>
+  <div class="hero-content">
+    <div class="hero-content-overlay">
+            <div class="container">
+              <div class="row">
+                    <div class="col-12">
+                        <div class="hero-content-wrap flex flex-column justify-content-center align-items-start">
+                            <header class="entry-header">
+                                <h4>Welcome Industry Editor: {{user.firstname}} {{user.lastname}}</h4>
+                                {{#if usr.username}}
+                                <h1>Editing <br/> <em>{{ usr.username }}</em></h1>
+                                {{else}}
+                                <h1>Adding A <br/> NEW User!</h1>
+                                {{/if}}
+                            </header><!-- .entry-header -->
+
+                            <div class="entry-content">
+                                <form method="POST" action="/admin/industries/add">
+                                    <label class="fixedlabel">Industry:</label>
+                                    <input type="text" name="industry" /><br />
+                                    <label class="fixedlabel"></label><button type="submit" name="Submit">Submit</button>
+                                </form>
+                            </div><!-- .entry-content -->
+
+                            <footer class="entry-footer read-more">
+                                <a href="#">Add a New Industry</a>
+                            </footer><!-- .entry-footer -->
+                        </div><!-- .hero-content-wrap -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+  </div><!-- .container -->
+  </div><!-- .hero-content-hero-content-overlay -->
+  </div><!-- .hero-content -->
+</body>

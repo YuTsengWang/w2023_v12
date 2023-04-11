@@ -1,0 +1,67 @@
+<header class="site-header">
+            <div class="top-header-bar">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
+                            <div class="header-bar-email d-flex align-items-center">
+                                <img src="images/logo5.png" class="fa fa-envelope" alt=""><h1 class="site-title"><a href="/" rel="home">Trio</a></h1>
+                                <div class="nav-bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-9 col-lg-3">                            
+                        </div><!-- .col -->
+
+                        <div class="col-3 col-lg-9 flex justify-content-end align-content-center">
+                            <nav class="site-navigation flex justify-content-end align-items-center">
+                                <ul class="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="/about">About</a></li>
+                                    <li><a href="/contact">Contact</a></li>
+                                    <li><a href="/industry">POST</a></li>
+                                </ul>
+
+                                <div class="hamburger-menu d-lg-none">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div><!-- .hamburger-menu -->
+
+                                
+                                <div class="header-bar-cart">
+                                    <a href="#" class="flex justify-content-center align-items-center"><span aria-hidden="true"></span></a>
+                                </div>                                
+                                <!-- .header-bar-search -->
+                                
+                            </nav><!-- .site-navigation -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                </div><!-- .container -->
+                                </div><!-- .nav-bar -->
+                            </div><!-- .header-bar-logo -->
+                        </div><!-- .col -->
+                        <div class="col-12 col-lg-6 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
+                            <div class="header-bar-search">
+                                <form class="flex align-items-stretch">
+                                    <input type="search" placeholder="What would you like to search?">
+                                    <button type="submit" value="" class="flex justify-content-center align-items-center"><i class="fa fa-search"></i></button>
+                                </form>
+                            </div><!-- .header-bar-search -->
+
+                            <div class="header-bar-menu">
+                                <ul class="flex justify-content-center align-items-center py-2 pt-md-0">
+                                    {{#if username }}
+                                        <li>Welcome <em>{{username}}</em>!</li>   
+                                        <li><a href="/profile">Profile</a></li>
+                                        <li><a href="/logout">Logout</a></li>
+                                    {{else}}
+                                        <li><a href="/register">Register</a></li>
+                                        <li><a href="/login">Login</a></li>
+                                    {{/if}}
+                                </ul>
+                            </div><!-- .header-bar-menu -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                </div><!-- .container-fluid -->
+            </div><!-- .top-header-bar -->
+</header><!-- .site-header -->

@@ -1,0 +1,18 @@
+{{#if industries}}
+  <nav class="site-navigation flex justify-content-end align-items-center">
+    <ul class="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
+      {{#each industries}}
+        <li><a href="/industry/{{this.industry}}">{{this.industry}}</a></li>
+      {{/each}}
+    </ul>
+    <div class="hamburger-menu d-lg-none">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+    </div><!-- .hamburger-menu -->
+  </nav>
+{{/if}}
+
+
+

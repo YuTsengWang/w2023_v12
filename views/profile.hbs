@@ -1,0 +1,33 @@
+<body>
+  <div class="hero-content">
+    <div class="hero-content-overlay">
+            <div class="container">
+              <div class="row">
+                    <div class="col-12">
+                        <div class="hero-content-wrap flex flex-column justify-content-center align-items-start">
+                            
+                            <header class="entry-header">
+                                    <h4>Welcom to {{user.firstName}} {{user.lastName}} profile</h4>
+                                    <h1>Here is <em>{{ user.username }} information</h1>
+                            </header><!-- .entry-header -->
+
+                            <div class="entry-content">
+                            
+                                <label class="fixedlabel">User Name:</label>{{user.username}}<br />
+                                <label class="fixedlabel">First Name:</label>{{user.firstName}}<br />
+                                <label class="fixedlabel">Last Name:</label>{{user.lastName}}<br />
+                                <label class="fixedlabel">E-mail:</label>{{user.email}}<br />
+                                <label class="fixedlabel">Admin:</label>{{user.isAdmin}}<br />
+                                <footer class="entry-footer read-more">
+                                    <a href="/Profile/Edit">Edit</a>
+                                </footer><!-- .entry-footer -->
+                                
+
+                            </div><!-- .entry-content -->
+                        </div><!-- .hero-content-wrap -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+  </div><!-- .container -->
+  </div><!-- .hero-content-hero-content-overlay -->
+  </div><!-- .hero-content -->
+</body>

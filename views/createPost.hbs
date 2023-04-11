@@ -1,0 +1,102 @@
+<body>
+    <div class="hero-content">
+        <div class="hero-content-overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                       <div class="hero-content-wrap flex flex-column justify-content-center align-items-start">
+
+                             <header class="entry-header">
+                                <h2 class="entry-title">Create a post for the {{industry}} community!</h2>
+                            </header><!-- .entry-header -->
+
+                            <div class="entry-content">
+                                <form method="post" action="/industry/addpost">
+                                    <input type="hidden" name="user_name" value="{{user.username}}"/>
+                                    <input type="hidden" name="category_name" value="{{industry}}"/>
+                                    <fieldset>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>Title:</label>
+                                                    <input class="form-control" name="title" type="text" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>Description:</label>
+                                                    <input class="form-control" name="description" type="text"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                        <input type="submit" class="btn btn-primary float-right" value="Create Post" /><br /><br /><br />
+                                </form>
+                            </div><!-- .entry-content -->
+
+                       </div><!-- .hero-content-wrap -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .hero-content-hero-content-overlay -->
+    </div><!-- .hero-content -->        
+    <script type='text/javascript' src='../js/jquery.js'></script>
+    <script type='text/javascript' src='../js/swiper.min.js'></script>
+    <script type='text/javascript' src='../js/masonry.pkgd.min.js'></script>
+    <script type='text/javascript' src='../js/jquery.collapsible.min.js'></script>
+    <script type='text/javascript' src='../js/custom.js'></script>
+</body>
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>create post - CAP805 winter 2023 Demo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/theme.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        {{> header user}}
+
+        <!-- Content -->
+        <div class="contentContainer">
+            <h1>Create a post for the {{industry}} community!</h1>
+
+            <form method="post" action="/industry/addpost">
+                <input type="hidden" name="user_name" value="{{user.username}}"/>
+                <input type="hidden" name="category_name" value="{{industry}}"/>
+                <fieldset>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Title:</label>
+                                <input class="form-control" name="title" type="text" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Description:</label>
+                                <input class="form-control" name="description" type="text"/>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <input type="submit" class="btn btn-primary float-right" value="Create Post" /><br /><br /><br />
+            </form>
+
+
+        </div>
+
+        <!-- footer -->
+        {{> footer user}}
+    </div>
+</body>
+
+</html>

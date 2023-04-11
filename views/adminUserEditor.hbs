@@ -1,0 +1,124 @@
+<body>
+  <div class="hero-content">
+    <div class="hero-content-overlay">
+            <div class="container">
+              <div class="row">
+                    <div class="col-12">
+                        <div class="hero-content-wrap flex flex-column justify-content-center align-items-start">
+                            <header class="entry-header">
+                                <h4>Welcome Profile Editor: {{user.firstname}} {{user.lastname}}</h4>
+                                {{#if usr.username}}
+                                <h1>Editing <br/> <em>{{ usr.username }}</em></h1>
+                                {{else}}
+                                <h1>Adding A <br/> NEW User!</h1>
+                                {{/if}}
+                            </header><!-- .entry-header -->
+
+                            <div class="entry-content">
+                                <form method="POST" action="/admin/user/edit">
+                                    <!-- only allow username to be edited during ADD, not EDIT -->
+                                    {{#if usr.username}}
+                                    <input type="hidden" name="edit" value="1" />
+                                    <input type="hidden" name="username" value="{{usr.username}}" />
+                                    {{else}}
+                                    <input type="hidden" name="edit" value="0" />
+                                    <label class="fixedlabel">User Name:</label>
+                                    <input type="text" name="username" /><br />
+                                    <label class="fixedlabel">Password:</label>
+                                    <input type="password" name="password" value="{{usr.password}}" /><br />
+                                    {{/if}}
+                                    <!-- all other fields -->
+                                    <label class="fixedlabel">First Name:</label>
+                                    <input type="text" name="fname" value="{{usr.firstname}}" /><br />
+                                    <label class="fixedlabel">Last Name:</label>
+                                    <input type="text" name="lname" value="{{usr.lastname}}" /><br />
+                                    <label class="fixedlabel">E-mail:</label>
+                                    <input type="text" name="email" value="{{usr.email}}" /><br />
+                                    <label class="fixedlabel">Admin:</label>
+                                    {{#if (usr.isAdmin.value)}}
+                                    <input type="checkbox" name="isAdmin" checked="true" /><br />
+                                    {{else }}
+                                    <input type="checkbox" name="isAdmin" /><br />
+                                    {{/if}}
+                                    <label class="fixedlabel"></label><button type="submit" name="Submit">Submit</button>
+                                </form>
+                            </div><!-- .entry-content -->
+
+                            <footer class="entry-footer read-more">
+                                <a href="/admin/users/add">Add A New User</a>
+                            </footer><!-- .entry-footer -->
+                        </div><!-- .hero-content-wrap -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+  </div><!-- .container -->
+  </div><!-- .hero-content-hero-content-overlay -->
+  </div><!-- .hero-content -->
+</body>
+
+
+<body>
+        <div class="hero-content">
+            <div class="hero-content-overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="hero-content-wrap flex flex-column justify-content-center align-items-start">
+                            <header class="entry-header">
+                                <h4>Welcome Profile Editor: {{user.firstname}} {{user.lastname}}</h4>
+                                {{#if usr.username}}
+                                <h1>Editing <br/> <em>{{ usr.username }}</em></h1>
+                                {{else}}
+                                <h1>Adding A <br/> NEW User!</h1>
+                                {{/if}}
+                            </header><!-- .entry-header -->
+                            <div class="entry-content">
+                                <p></p>
+                            </div><!-- .entry-content -->
+
+                            <footer class="entry-footer read-more">
+                                <a href="/admin/users/add">Add A New User</a>
+                            </footer><!-- .entry-footer -->
+
+                        </div><!-- .hero-content-wrap -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+            </div><!-- .hero-content-hero-content-overlay -->
+        </div><!-- .hero-content -->        
+        <div class="col-12">
+            <div class="entry-content justify-content-center align-items-start">
+                                <form method="POST" action="/admin/user/edit">
+                <!-- only allow username to be edited during ADD, not EDIT -->
+                {{#if usr.username}}
+                <input type="hidden" name="edit" value="1" />
+                <input type="hidden" name="username" value="{{usr.username}}" />
+                {{else}}
+                <input type="hidden" name="edit" value="0" />
+                <label class="fixedlabel">User Name:</label>
+                <input type="text" name="username" /><br />
+                <label class="fixedlabel">Password:</label>
+                <input type="password" name="password" value="{{usr.password}}" /><br />
+                {{/if}}
+                <!-- all other fields -->
+                <label class="fixedlabel">First Name:</label>
+                <input type="text" name="fname" value="{{usr.firstname}}" /><br />
+                <label class="fixedlabel">Last Name:</label>
+                <input type="text" name="lname" value="{{usr.lastname}}" /><br />
+                <label class="fixedlabel">E-mail:</label>
+                <input type="text" name="email" value="{{usr.email}}" /><br />
+                <label class="fixedlabel">Admin:</label>
+                {{#if (usr.isAdmin.value)}}
+                <input type="checkbox" name="isAdmin" checked="true" /><br />
+                {{else }}
+                <input type="checkbox" name="isAdmin" /><br />
+                {{/if}}
+                <label class="fixedlabel"></label><button type="submit" name="Submit">Submit</button>
+            </form>
+            </div>
+        </div>
+        <script type='text/javascript' src='../js/jquery.js'></script>
+        <script type='text/javascript' src='../js/swiper.min.js'></script>
+        <script type='text/javascript' src='../js/masonry.pkgd.min.js'></script>
+        <script type='text/javascript' src='../js/jquery.collapsible.min.js'></script>
+        <script type='text/javascript' src='../js/custom.js'></script>
+</body>
